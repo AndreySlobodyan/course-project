@@ -7,15 +7,8 @@ class TrendingMovisTableViewCell: UITableViewCell {
 
     
     @IBOutlet weak var Poster: UIImageView!
-    
-    
     @IBOutlet weak var Title: UILabel!
-    
-   
-    
     @IBOutlet weak var ReleaseDate: UILabel!
-    
-    
     @IBOutlet weak var VoteAaverage: UILabel!
     
     
