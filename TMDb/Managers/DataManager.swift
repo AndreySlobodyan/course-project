@@ -88,16 +88,14 @@ struct DataManager{
         
         if let movieToDelete = realm?.objects(MovieRealm.self).filter("id = %@", id ).first {
             
-            // Начинаем транзакцию записи
+            // Start the write transaction
             try! realm?.write {
-                // Удаляем объект из базы данных
-                realm?.delete(movieToDelete)
+                
+            // Delete the object from the database
+               realm?.delete(movieToDelete)
             }
         }
     }
-    
-    
-    
     
 }
 

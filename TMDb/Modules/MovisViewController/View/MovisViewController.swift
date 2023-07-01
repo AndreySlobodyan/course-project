@@ -11,12 +11,12 @@ class MovisViewController: UIViewController {
     
     var viewModel: MovisViewModel = MovisViewModel()
     
-    // MARK: IBOutlets
+    //MARK: - IBOutlets
     
     @IBOutlet weak var trendingTableView: UITableView!
     @IBOutlet weak var backgraundView: UIImageView!
     
-    // MARK: UIViewController life circle
+    //MARK: - UIViewController life circle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,14 +51,15 @@ extension MovisViewController: UITableViewDelegate, UITableViewDataSource {
     
     
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         return self.viewModel.movisList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "TrendingMovisTableViewCell", for: indexPath) as? TrendingMovisTableViewCell{
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "TrendingMovisTableViewCell",
+                                                    for: indexPath) as? TrendingMovisTableViewCell {
             
             cell.configurWith(self.viewModel.movisList[indexPath.row])
             cell.backgroundView = nil
@@ -82,9 +83,10 @@ extension MovisViewController: UITableViewDelegate, UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let movi = self.viewModel.movisList[indexPath.row]
-        let storiboard = UIStoryboard(name: "Main", bundle: nil)
-        if let OverviewView = storiboard.instantiateViewController(withIdentifier: "OverviewViewController") as? OverviewViewController {
+    let movi = self.viewModel.movisList[indexPath.row]
+    let storiboard = UIStoryboard(name: "Main", bundle: nil)
+    if let OverviewView = storiboard.instantiateViewController(withIdentifier: "OverviewViewController")
+            as? OverviewViewController {
             OverviewView.modelOverview.movie = movi
             navigationController?.pushViewController(OverviewView , animated: true)
         }

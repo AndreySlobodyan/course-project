@@ -164,7 +164,6 @@
 			isa = PBXGroup;
 			children = (
 				04A475BD2A2BAA420081961A /* RealmModels  */,
-				04A475BC2A2BAA180081961A /* NetworkModels */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -174,7 +173,7 @@
 			children = (
 				04E64F3629CF81C00079757F /* MovisViewController.swift */,
 				04E64F3829CF81C00079757F /* Main.storyboard */,
-				04E9F68029D38B6400BB70D9 /* cell */,
+				04E9F68029D38B6400BB70D9 /* Cell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -232,6 +231,14 @@
 			path = "RealmModels ";
 			sourceTree = "<group>";
 		};
+		04A5CF552A505ECA00B2D3DA /* Network  */ = {
+			isa = PBXGroup;
+			children = (
+				04A475BC2A2BAA180081961A /* NetworkModels */,
+			);
+			path = "Network ";
+			sourceTree = "<group>";
+		};
 		04E64F2629CF81C00079757F = {
 			isa = PBXGroup;
 			children = (
@@ -253,22 +260,23 @@
 		04E64F3129CF81C00079757F /* TMDb */ = {
 			isa = PBXGroup;
 			children = (
+				04A5CF552A505ECA00B2D3DA /* Network  */,
+				04981E6729DCA95800E7164A /* Managers */,
 				04143DE52A1FE9FF00458DD9 /* Common */,
 				04143DD32A1FE21800458DD9 /* Modules */,
-				04981E6729DCA95800E7164A /* Managers */,
 				044A09F029F1AB9E00329B39 /* Default files */,
 				04E64F4029CF81C10079757F /* Info.plist */,
 			);
 			path = TMDb;
 			sourceTree = "<group>";
 		};
-		04E9F68029D38B6400BB70D9 /* cell */ = {
+		04E9F68029D38B6400BB70D9 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
 				04E9F68129D38BA800BB70D9 /* TrendingMovisTableViewCell.swift */,
 				04E9F68229D38BA800BB70D9 /* TrendingMovisTableViewCell.xib */,
 			);
-			path = cell;
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		33DE49B9FE137D0EB6068680 /* Pods */ = {

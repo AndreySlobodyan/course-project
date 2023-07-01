@@ -14,12 +14,12 @@ class ModelOverviewViewController: UIButton {
     var movie: Movie?
 
     func getImageURL(completion: @escaping ((URL?) -> Void)) {
-        var imageURLString = ""
+        var URLString = ""
         
         if let backdropPath = self.movie?.backdropPath {
-            imageURLString = "https://image.tmdb.org/t/p/w500" + backdropPath
+            URLString = Constants.Network.imageURLString + backdropPath
             
-            let imageURL = URL(string: imageURLString)
+            let imageURL = URL(string: URLString)
             completion(imageURL)
         } else {
             completion(nil)
@@ -55,10 +55,9 @@ class ModelOverviewViewController: UIButton {
         } else {
             self.setImage(heartImage, for: .normal)
             
-            
-        }
+            }
         
-        // Добавляем анимацию изменения размера кнопки при нажатии
+        // Add an animation of the button resizing on click
         let animation = CABasicAnimation(keyPath: "transform.scale")
         animation.toValue = 0.7
         animation.duration = 0.1

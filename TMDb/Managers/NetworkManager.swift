@@ -11,7 +11,6 @@ import Alamofire
 
 struct NetworkManager  {
     
-    
     static let shared = NetworkManager()
     
     private init(){}
@@ -19,9 +18,8 @@ struct NetworkManager  {
     
     func requestTrandingMovies (completion: @escaping (([Movie])-> ())) {
         
-        let url = Constants.network.defaultPath + "trending/movie/day?api_key=" + Constants.network.apiKey
-        
-        
+        let url = Constants.Network.defaultPath + Constants.Network.movieTrendingDay +
+        Constants.Network.apiKey
         
         AF.request(url).response { response in
             switch response.result {
@@ -43,15 +41,9 @@ struct NetworkManager  {
     }
     
     
-    
-    
-    
-    
-    
-    
     func requestVideo(_ Id: Int, completion: @escaping(([Video]) -> ())) {
         
-        let url = Constants.network.defaultPath + "movie/\(Id)/videos?api_key=" + Constants.network.apiKey
+        let url = Constants.Network.defaultPath + "movie/\(Id)/videos?api_key=" + Constants.Network.apiKey
         
         AF.request(url).responseJSON { response in
             
