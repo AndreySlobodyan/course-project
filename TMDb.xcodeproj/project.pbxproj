@@ -194,7 +194,7 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
-		044A09F029F1AB9E00329B39 /* Default files */ = {
+		044A09F029F1AB9E00329B39 /* App Files etc */ = {
 			isa = PBXGroup;
 			children = (
 				04E64F3229CF81C00079757F /* AppDelegate.swift */,
@@ -202,7 +202,7 @@
 				04E64F3D29CF81C10079757F /* LaunchScreen.storyboard */,
 				04E64F3B29CF81C10079757F /* Assets.xcassets */,
 			);
-			path = "Default files";
+			path = "App Files etc";
 			sourceTree = "<group>";
 		};
 		04981E6729DCA95800E7164A /* Managers */ = {
@@ -264,7 +264,7 @@
 				04981E6729DCA95800E7164A /* Managers */,
 				04143DE52A1FE9FF00458DD9 /* Common */,
 				04143DD32A1FE21800458DD9 /* Modules */,
-				044A09F029F1AB9E00329B39 /* Default files */,
+				044A09F029F1AB9E00329B39 /* App Files etc */,
 				04E64F4029CF81C10079757F /* Info.plist */,
 			);
 			path = TMDb;
